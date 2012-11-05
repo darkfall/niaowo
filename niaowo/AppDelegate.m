@@ -19,6 +19,18 @@
 {
 }
 
+- (void)loadTopicList:(NSArray*)topics currentPage:(NSUInteger)currentPage totalPages:(NSUInteger)totalPages {
+    [_postDataSource.topics removeAllObjects];
+    [_postDataSource.topics addObjectsFromArray:topics];
+    
+    [_postList reloadData];
+    
+    _currentPage = currentPage;
+    _totalPages = totalPages;
+    
+    [_pageLabel setStringValue:[NSString stringWithFormat:@"%lu/%lu", _currentPage, _totalPages]];
+}
+
 - (void)requestForPostsAtPage:(NSUInteger)page {
     [_loadingProgressIndicator startAnimation:self];
     
@@ -28,13 +40,29 @@
     }
     _pageRequestConn = [API requestTopicsForPage:page handler:^(NSArray* topics, NSUInteger currentPage, NSUInteger totalPages) {
         if(topics) {
-            [_postDataSource.topics removeAllObjects];
-            [_postDataSource.topics addObjectsFromArray:topics];
+            [self loadTopicList:topics currentPage:currentPage totalPages:totalPages];
+        } else {
+            
+        }
         
-            [_postList reloadData];
-        
-            _currentPage = currentPage;
-            _totalPages = totalPages;
+        [_loadingProgressIndicator stopAnimation:self];
+        _pageRequestConn = nil;
+    }];
+}
+
+- (void)onStartup {
+    [_loadingProgressIndicator startAnimation:self];
+    
+    // try request page
+    [API requestTopicsForPage:1 handler:^(NSArray* topics, NSUInteger currentPage, NSUInteger totalPages) {
+        // if failed
+        if(topics == nil) {
+            _loginPanel = [[LoginWindowController alloc] init];
+            [_loginPanel beginSheetModalForWindow:_window completionHandler:^() {
+                [self requestForPostsAtPage:1];
+            }];
+        } else {
+            [self loadTopicList:topics currentPage:currentPage totalPages:totalPages];
         }
         
         [_loadingProgressIndicator stopAnimation:self];
@@ -51,10 +79,7 @@
     [_window setDelegate:self];
     [_window makeKeyAndOrderFront:self];
     
-    _loginPanel = [[LoginWindowController alloc] init];
-    [_loginPanel beginSheetModalForWindow:_window completionHandler:^() {
-        [self requestForPostsAtPage:1];
-    }];
+    [self onStartup];
 }
 
 - (void)onLoginIn:(id)sender {

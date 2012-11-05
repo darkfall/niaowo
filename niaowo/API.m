@@ -70,21 +70,26 @@ static NSString* TOPIC_CONTENT_URL_FORMAT = @"https://www.niaowo.me/topics/%d.js
                                                                   options:NSJSONReadingAllowFragments
                                                                     error:nil];
            
-           NSMutableArray* posts = [[NSMutableArray alloc] init];
-           for(NSDictionary* dict in [result objectForKey:@"topics"]) {
-               Topic* topic = [[Topic alloc] init];
-               topic.desc = [dict valueForKey:@"desc"];
-               topic.createdAt = [dict valueForKey:@"created_at"];
-               topic.updatedAt = [dict valueForKey:@"updated_at"];
-               topic.title = [dict valueForKey:@"title"];
-               topic.memberId = [[dict valueForKey:@"member_id"] intValue];
-               topic.topicId = [[dict valueForKey:@"id"] intValue];
+           NSString* error = [result objectForKey:@"error"];
+           if(error != nil) {
+               handler(nil, 0, 0);
+           } else {
+               NSMutableArray* posts = [[NSMutableArray alloc] init];
+               for(NSDictionary* dict in [result objectForKey:@"topics"]) {
+                   Topic* topic = [[Topic alloc] init];
+                   topic.desc = [dict valueForKey:@"desc"];
+                   topic.createdAt = [dict valueForKey:@"created_at"];
+                   topic.updatedAt = [dict valueForKey:@"updated_at"];
+                   topic.title = [dict valueForKey:@"title"];
+                   topic.memberId = [[dict valueForKey:@"member_id"] intValue];
+                   topic.topicId = [[dict valueForKey:@"id"] intValue];
+                   
+                   [posts addObject:topic];
+               }
                
-               [posts addObject:topic];
+               NSDictionary* pageInfo = [result objectForKey:@"page"];
+               handler(posts, [[pageInfo valueForKey:@"current_page"] intValue], [[pageInfo valueForKey:@"total_pages"] intValue]);
            }
-           
-           NSDictionary* pageInfo = [result objectForKey:@"page"];
-           handler(posts, [[pageInfo valueForKey:@"current_page"] intValue], [[pageInfo valueForKey:@"total_pages"] intValue]);
        } else {
            handler(nil, 0, 0);
        }
@@ -103,22 +108,27 @@ static NSString* TOPIC_CONTENT_URL_FORMAT = @"https://www.niaowo.me/topics/%d.js
                                                                   options:NSJSONReadingAllowFragments
                                                                     error:nil];
            
-           NSDictionary* topicDict = [result objectForKey:@"topic"];
-           
-           t.body = [topicDict objectForKey:@"body"];
-           
-           id commentsDict = [result objectForKey:@"comments"];
-           NSMutableArray* comments = [[NSMutableArray alloc] init];
-           for(NSDictionary* commentDict in commentsDict) {               
-               TopicComment* comment = [[TopicComment alloc] init];
-               comment.body = [commentDict objectForKey:@"body"];
-               comment.author = [commentDict objectForKey:@"author"];
-               comment.createdAt = [commentDict objectForKey:@"created"];
+           NSString* error = [result objectForKey:@"error"];
+           if(error != nil) {
+               handler(nil, nil);
+           } else {
+               NSDictionary* topicDict = [result objectForKey:@"topic"];
                
-               [comments addObject:comment];
+               t.body = [topicDict objectForKey:@"body"];
+               
+               id commentsDict = [result objectForKey:@"comments"];
+               NSMutableArray* comments = [[NSMutableArray alloc] init];
+               for(NSDictionary* commentDict in commentsDict) {
+                   TopicComment* comment = [[TopicComment alloc] init];
+                   comment.body = [commentDict objectForKey:@"body"];
+                   comment.author = [commentDict objectForKey:@"author"];
+                   comment.createdAt = [commentDict objectForKey:@"created"];
+                   
+                   [comments addObject:comment];
+               }
+               
+               handler(t, comments);
            }
-           
-           handler(t, comments);
        } else {
            handler(nil, nil);
        }
