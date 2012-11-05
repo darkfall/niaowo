@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882115601645473C009E3A91 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8821155F1645473C009E3A91 /* LoginWindow.xib */; };
+		88211564164548FE009E3A91 /* LoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88211563164548FE009E3A91 /* LoginWindowController.m */; };
+		8821156816454C78009E3A91 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8821156716454C78009E3A91 /* logo.png */; };
+		889316EC163CF7610071863A /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 889316EB163CF7610071863A /* API.m */; };
 		88D9FCF11606D21900614713 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D9FCF01606D21900614713 /* Cocoa.framework */; };
 		88D9FCFB1606D21900614713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88D9FCF91606D21900614713 /* InfoPlist.strings */; };
 		88D9FCFD1606D21900614713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D9FCFC1606D21900614713 /* main.m */; };
@@ -17,6 +21,18 @@
 		88D9FD101606D21900614713 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D9FCF01606D21900614713 /* Cocoa.framework */; };
 		88D9FD181606D21900614713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88D9FD161606D21900614713 /* InfoPlist.strings */; };
 		88D9FD1B1606D21900614713 /* niaowoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D9FD1A1606D21900614713 /* niaowoTests.m */; };
+		88D9FD4D1606D48500614713 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D9FD4C1606D48500614713 /* Topic.m */; };
+		88D9FD501606D57B00614713 /* PostDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D9FD4F1606D57B00614713 /* PostDataSource.m */; };
+		88E63F8616472BB100E55769 /* AsynchronousConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E63F8516472BB100E55769 /* AsynchronousConnection.m */; };
+		88E63F93164738F900E55769 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E63F92164738F900E55769 /* Comment.m */; };
+		88E63F9B164740D900E55769 /* NSData+CocoaDevUsersAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E63F96164740D900E55769 /* NSData+CocoaDevUsersAdditions.m */; };
+		88E63F9C164740D900E55769 /* NSDictionary+URLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E63F98164740D900E55769 /* NSDictionary+URLQuery.m */; };
+		88E63F9D164740D900E55769 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E63F9A164740D900E55769 /* NSString+URLEncode.m */; };
+		88EEBF7D1606E13F00F9F90C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEBF7C1606E13F00F9F90C /* libxml2.dylib */; };
+		88EEBF841606E17E00F9F90C /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEBF831606E17E00F9F90C /* libz.1.dylib */; };
+		88EEBF861606E18200F9F90C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEBF851606E18200F9F90C /* Security.framework */; };
+		88EEBF881606E18E00F9F90C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEBF871606E18E00F9F90C /* WebKit.framework */; };
+		88EEBF8E1606E19D00F9F90C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEBF8D1606E19D00F9F90C /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8821155F1645473C009E3A91 /* LoginWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
+		88211562164548FE009E3A91 /* LoginWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWindowController.h; sourceTree = "<group>"; };
+		88211563164548FE009E3A91 /* LoginWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWindowController.m; sourceTree = "<group>"; };
+		8821156716454C78009E3A91 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		889316E6163CF5480071863A /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		889316EA163CF7610071863A /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		889316EB163CF7610071863A /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		88D9FCEC1606D21900614713 /* niaowo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niaowo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D9FCF01606D21900614713 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		88D9FCF31606D21900614713 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,6 +72,25 @@
 		88D9FD171606D21900614713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		88D9FD191606D21900614713 /* niaowoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = niaowoTests.h; sourceTree = "<group>"; };
 		88D9FD1A1606D21900614713 /* niaowoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = niaowoTests.m; sourceTree = "<group>"; };
+		88D9FD4B1606D48500614713 /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
+		88D9FD4C1606D48500614713 /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
+		88D9FD4E1606D57B00614713 /* PostDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDataSource.h; sourceTree = "<group>"; };
+		88D9FD4F1606D57B00614713 /* PostDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDataSource.m; sourceTree = "<group>"; };
+		88E63F8516472BB100E55769 /* AsynchronousConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchronousConnection.m; sourceTree = "<group>"; };
+		88E63F901647313B00E55769 /* AsynchronousConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchronousConnection.h; sourceTree = "<group>"; };
+		88E63F91164738F900E55769 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		88E63F92164738F900E55769 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		88E63F95164740D900E55769 /* NSData+CocoaDevUsersAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CocoaDevUsersAdditions.h"; sourceTree = "<group>"; };
+		88E63F96164740D900E55769 /* NSData+CocoaDevUsersAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CocoaDevUsersAdditions.m"; sourceTree = "<group>"; };
+		88E63F97164740D900E55769 /* NSDictionary+URLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+URLQuery.h"; sourceTree = "<group>"; };
+		88E63F98164740D900E55769 /* NSDictionary+URLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+URLQuery.m"; sourceTree = "<group>"; };
+		88E63F99164740D900E55769 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		88E63F9A164740D900E55769 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		88EEBF7C1606E13F00F9F90C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		88EEBF831606E17E00F9F90C /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
+		88EEBF851606E18200F9F90C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		88EEBF871606E18E00F9F90C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		88EEBF8D1606E19D00F9F90C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EEBF8E1606E19D00F9F90C /* SystemConfiguration.framework in Frameworks */,
+				88EEBF881606E18E00F9F90C /* WebKit.framework in Frameworks */,
+				88EEBF861606E18200F9F90C /* Security.framework in Frameworks */,
+				88EEBF841606E17E00F9F90C /* libz.1.dylib in Frameworks */,
+				88EEBF7D1606E13F00F9F90C /* libxml2.dylib in Frameworks */,
 				88D9FCF11606D21900614713 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +122,11 @@
 		88D9FCE11606D21900614713 = {
 			isa = PBXGroup;
 			children = (
+				88EEBF8D1606E19D00F9F90C /* SystemConfiguration.framework */,
+				88EEBF871606E18E00F9F90C /* WebKit.framework */,
+				88EEBF851606E18200F9F90C /* Security.framework */,
+				88EEBF831606E17E00F9F90C /* libz.1.dylib */,
+				88EEBF7C1606E13F00F9F90C /* libxml2.dylib */,
 				88D9FCF61606D21900614713 /* niaowo */,
 				88D9FD131606D21900614713 /* niaowoTests */,
 				88D9FCEF1606D21900614713 /* Frameworks */,
@@ -114,9 +166,25 @@
 		88D9FCF61606D21900614713 /* niaowo */ = {
 			isa = PBXGroup;
 			children = (
+				88E63F94164740D900E55769 /* Categories */,
 				88D9FD021606D21900614713 /* AppDelegate.h */,
 				88D9FD031606D21900614713 /* AppDelegate.m */,
+				88D9FD4B1606D48500614713 /* Topic.h */,
+				88D9FD4C1606D48500614713 /* Topic.m */,
+				88E63F91164738F900E55769 /* Comment.h */,
+				88E63F92164738F900E55769 /* Comment.m */,
+				88D9FD4E1606D57B00614713 /* PostDataSource.h */,
+				88D9FD4F1606D57B00614713 /* PostDataSource.m */,
+				889316EA163CF7610071863A /* API.h */,
+				889316EB163CF7610071863A /* API.m */,
+				889316E6163CF5480071863A /* Settings.h */,
 				88D9FD051606D21900614713 /* MainMenu.xib */,
+				8821155F1645473C009E3A91 /* LoginWindow.xib */,
+				88211562164548FE009E3A91 /* LoginWindowController.h */,
+				88211563164548FE009E3A91 /* LoginWindowController.m */,
+				88E63F901647313B00E55769 /* AsynchronousConnection.h */,
+				88E63F8516472BB100E55769 /* AsynchronousConnection.m */,
+				8821156716454C78009E3A91 /* logo.png */,
 				88D9FCF71606D21900614713 /* Supporting Files */,
 			);
 			path = niaowo;
@@ -151,6 +219,19 @@
 				88D9FD161606D21900614713 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88E63F94164740D900E55769 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				88E63F95164740D900E55769 /* NSData+CocoaDevUsersAdditions.h */,
+				88E63F96164740D900E55769 /* NSData+CocoaDevUsersAdditions.m */,
+				88E63F97164740D900E55769 /* NSDictionary+URLQuery.h */,
+				88E63F98164740D900E55769 /* NSDictionary+URLQuery.m */,
+				88E63F99164740D900E55769 /* NSString+URLEncode.h */,
+				88E63F9A164740D900E55769 /* NSString+URLEncode.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +308,8 @@
 				88D9FCFB1606D21900614713 /* InfoPlist.strings in Resources */,
 				88D9FD011606D21900614713 /* Credits.rtf in Resources */,
 				88D9FD071606D21900614713 /* MainMenu.xib in Resources */,
+				882115601645473C009E3A91 /* LoginWindow.xib in Resources */,
+				8821156816454C78009E3A91 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +346,15 @@
 			files = (
 				88D9FCFD1606D21900614713 /* main.m in Sources */,
 				88D9FD041606D21900614713 /* AppDelegate.m in Sources */,
+				88D9FD4D1606D48500614713 /* Topic.m in Sources */,
+				88D9FD501606D57B00614713 /* PostDataSource.m in Sources */,
+				889316EC163CF7610071863A /* API.m in Sources */,
+				88211564164548FE009E3A91 /* LoginWindowController.m in Sources */,
+				88E63F8616472BB100E55769 /* AsynchronousConnection.m in Sources */,
+				88E63F93164738F900E55769 /* Comment.m in Sources */,
+				88E63F9B164740D900E55769 /* NSData+CocoaDevUsersAdditions.m in Sources */,
+				88E63F9C164740D900E55769 /* NSDictionary+URLQuery.m in Sources */,
+				88E63F9D164740D900E55769 /* NSString+URLEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +466,8 @@
 		88D9FD1F1606D21900614713 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "niaowo/niaowo-Prefix.pch";
@@ -386,6 +480,8 @@
 		88D9FD201606D21900614713 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "niaowo/niaowo-Prefix.pch";
@@ -444,6 +540,7 @@
 				88D9FD201606D21900614713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88D9FD211606D21900614713 /* Build configuration list for PBXNativeTarget "niaowoTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +549,7 @@
 				88D9FD231606D21900614713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
