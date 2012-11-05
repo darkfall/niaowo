@@ -26,8 +26,8 @@ static NSString* TOPIC_CONTENT_URL_FORMAT = @"https://www.niaowo.me/topics/%d.js
     return [NSURL URLWithString:urlString];
 }
 
-+ (NSURL*)getTopicURL:(NSUInteger)page {
-    NSString* urlString = [NSString stringWithFormat:TOPIC_CONTENT_URL_FORMAT, page];
++ (NSURL*)getTopicURL:(NSUInteger)topicId {
+    NSString* urlString = [NSString stringWithFormat:TOPIC_CONTENT_URL_FORMAT, topicId];
     return [NSURL URLWithString:urlString];
 }
 
